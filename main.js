@@ -50,5 +50,10 @@ function jump() {
         
         jumpCount++;
         
+        function myFunction() {
+          document.getElementById("game");
+        }
+        
     }, 10);
 }
+
