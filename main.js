@@ -1,15 +1,17 @@
 var block = document.getElementById("block");
 var hole = document.getElementById("hole");
+var block2 = document.getElementById("block2");
+var hole2 = document.getElementById("hole2");
 var character = document.getElementById("character");
 var jumping = 0;
 var counter = 0;
 
-hole.addEventListener('animationinteration', () => {
+hole.addEventListener('animationiteration', () => {
     var random = -((Math.random()*300)+150);
-    var top = (random*100)+150;
     hole.style.top = random + "px";
     counter++;
 });
+
 
 setInterval(function(){
     var characterTop = 
@@ -24,9 +26,9 @@ setInterval(function(){
     
 
     
-        if((characterTop>480)||((blockleft<20)&&(blockleft>-50)&&((cTop<holetop)||(cTop>holetop+130)))){
-            alert("Game over. Score: "+(counter));
-            character.style.top = 100 + "px";
+        if((characterTop>480)||((blockleft<20)&&(blockleft>-50)&&((cTop<holetop)||(cTop>holetop+120)))){
+            alert("Game over. Score: "+(counter-1));
+            character.style.top = 230 + "px";
             counter=0;
         }
 }, 10);
@@ -36,8 +38,8 @@ function jump() {
     let jumpCount = 0;
     var jumpInterval = setInterval(function(){
         var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
-        if((character>6)&&(counter<15)){
-            character.style.top = (characterTop-5)+"px";
+        if((characterTop>6)&&(counter<15)){
+            character.style.top = (characterTop-3.5)+"px";
         }
          
         if(jumpCount>20){

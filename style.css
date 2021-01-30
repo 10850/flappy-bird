@@ -16,12 +16,12 @@
     height: 500px;
     background-color: black;
     position: relative;
-    left: 400px;
-    animation: block 2s infinite linear;
+    left: 500px;
+    animation: block 3s infinite linear;
 }
 
 @keyframes block{
-    0%{left:400px}
+    0%{left:1000px}
     100%{left:-50px}
 }
 
@@ -30,16 +30,19 @@
     height: 150px;
     background-color: white;
     position: relative;
-    left: 400px;
+    left: 500px;
     top: -500px;
-    animation: block 2s infinite linear;
+    animation: block 3s infinite linear;
 }
 
+
+
 #character{
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background-color: red;
     position: absolute;
     top: 100px;
     border-radius: 50%;
+
 }
